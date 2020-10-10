@@ -26,7 +26,7 @@ pipeline {
         stage('deploy') {
             steps {
                 dir('/var/lib/jenkins/workspace'){
-                    sh './script.sh'
+                    sh 'systemctl start expensetracker'
                 }
             }
         }
